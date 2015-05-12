@@ -3,7 +3,7 @@
 sentry-freight
 ==============
 
-A Sentry extension which integrates with Freight release tracking.
+An extension for Sentry which adds release tracking via Freight.
 
 :copyright: (c) 2015 by Sentry Team, see AUTHORS for more details.
 :license: Apache 2.0, see LICENSE for more details.
@@ -21,7 +21,7 @@ setup(
     author='David Cramer',
     author_email='dcramer@gmail.com',
     url='https://github.com/getsentry/sentry-freight',
-    description='A Sentry extension which integrates Freight release tracking.',
+    description='An extension for Sentry which adds release tracking via Freight.',
     long_description=open('README.rst').read(),
     license='Apache 2.0',
     package_dir={'': 'src'},

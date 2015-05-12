@@ -1,7 +1,7 @@
 sentry-freight
 =============
 
-A Sentry extension which integrates with Freight release tracking.
+An extension for Sentry which adds release tracking via Freight.
 
 Install
 -------
