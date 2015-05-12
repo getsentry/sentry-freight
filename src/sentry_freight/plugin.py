@@ -27,10 +27,16 @@ class FreightReleaseHook(ReleaseHook):
         if data['event'] == 'started':
             self.start_release(
                 version=data['sha'],
+                environment=data['env'],
+                ref=data['ref'],
+                url=data['link'],
             )
         elif data['event'] == 'finished':
             self.finish_release(
                 version=data['sha'],
+                environment=data['env'],
+                ref=data['ref'],
+                url=data['link'],
             )
         else:
             raise ValueError(data['event'])
