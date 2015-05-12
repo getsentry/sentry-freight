@@ -12,6 +12,14 @@ import sentry_freight
 
 from sentry.plugins import ReleaseHook, ReleaseTrackingPlugin
 
+DOC_HTML = """
+<p>Configure a Freight notification with the given webhook url.</p>
+<pre class="clippy">{{
+    "type": "sentry",
+    "config": {{"webhook_url": "{hook_url}"}}
+}}</pre>
+"""
+
 
 class FreightReleaseHook(ReleaseHook):
     def handle(self, request):
@@ -42,13 +50,7 @@ class FreightPlugin(ReleaseTrackingPlugin):
     version = sentry_freight.VERSION
 
     def get_release_doc_html(self, hook_url):
-        return """
-        <p>Configure a Freight notification with the given webhook url.</p>
-        <pre class="clippy">{{
-            "type": "sentry",
-            "config": {{"webhook_url": "{hook_url}"}}
-        }}</pre>
-        """.format(hook_url=hook_url)
+        return DOC_HTML.format(hook_url=hook_url)
 
     def get_release_hook(self):
         return FreightReleaseHook
