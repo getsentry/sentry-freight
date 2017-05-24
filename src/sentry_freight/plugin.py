@@ -53,6 +53,9 @@ class FreightPlugin(ReleaseTrackingPlugin):
     description = 'Integrate Freight release tracking.'
     version = sentry_freight.VERSION
 
+    def has_plugin_conf(self):
+        return True
+
     def get_release_doc_html(self, hook_url):
         return DOC_HTML.format(hook_url=hook_url)
 
