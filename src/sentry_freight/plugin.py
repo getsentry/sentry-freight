@@ -10,7 +10,9 @@ import json
 
 import sentry_freight
 
-from sentry.plugins import ReleaseHook, ReleaseTrackingPlugin
+from sentry.plugins.bases import ReleaseTrackingPlugin
+from sentry.plugins.interfaces.releasehook import ReleaseHook
+
 
 DOC_HTML = """
 <p>Configure a Freight notification with the given webhook url.</p>
