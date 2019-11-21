@@ -1,13 +1,6 @@
 sentry-freight
 =============
 
-An extension for Sentry which adds release tracking via Freight.
+THIS REPO HAS BEEN DEPRECATED AND NO LONGER HAS ANY PLUGINS
 
-Install
--------
-
-Install the package via ``pip``::
-
-    pip install sentry-freight
-
-You can now configure release tracking via your project settings.
+This repo is no longer in use. This plugin have been permanently moved into https://github.com/getsentry/sentry/tree/master/src/sentry_plugins/freight
