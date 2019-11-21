@@ -31,10 +31,8 @@ setup(
     include_package_data=True,
     entry_points={
         'sentry.apps': [
-            'sentry_freight = sentry_freight',
         ],
         'sentry.plugins': [
-            'sentry_freight = sentry_freight.plugin:FreightPlugin',
         ]
     },
     classifiers=[
